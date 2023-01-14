@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.page {
+  height: 150vh;
+  display: grid;
+  grid-template-rows: 50px 50px 1fr 50px;
+}
+
+header {
+  text-align: center;
+  padding: 1.5%;
+}
+.nav {
+  text-align: center;
+}
+.nav ol {
+  display: inline;
+  margin: 2.5%;
+}
+.main {
+  margin: 4%;
+  display: grid;
+  grid-template-columns: 1fr /*repeat(3, 1fr)*/;
+  grid-template-rows: auto 1fr auto /*repeat(3, 1fr)*/;
+  grid-template-areas:
+    "section1 "
+    "section2 "
+    " steps  ";
+  gap: 4vh;
+}
+
+.section1 {
+  grid-area: section1;
+  background-color: aliceblue;
+}
+.section2 {
+  grid-area: section2;
+  background-color: antiquewhite;
+}
+.container {
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.display--image {
+  width: 40vw;
+  height: 211px;
+  border: 1px black solid;
+  background-position: center;
+  background-size: cover;
+}
+.text {
+  width: 40vw;
+}
+
+.steps {
+  grid-area: steps;
+  background-color: aqua;
+}
+.steps ol {
+  padding-left: 3vw;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "logo nav";
+}
+.footer-logo {
+  grid-area: logo;
+  background-color: azure;
+}
+.footer-nav {
+  grid-area: nav;
+  background-color: beige;
+}
+
+.logo-r {
+  max-width: 100%;
+}
+
+.ll {
+  /* margin: 10px; */
+  width: fit-content;
+  max-width: 10%;
+}
