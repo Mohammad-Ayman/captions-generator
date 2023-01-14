@@ -64,7 +64,7 @@ header {
 
 .display--image {
   width: 40vw;
-  height: 211px;
+  height: 35vh;
   border: 1px black solid;
   background-position: center;
   background-size: cover;
