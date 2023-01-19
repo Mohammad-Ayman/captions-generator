@@ -20,43 +20,53 @@
       <nav class="nav">
         <ul>
           <ol>
-            <a href=".section1">Home Page </a>
+            <a href="#section1">Home Page </a>
           </ol>
           <ol>
-            <a href=".section2">Get a caption</a>
+            <a href="#section2">Get a caption</a>
           </ol>
           <ol>
-            <a href=".steps">Algorithms used </a>
+            <a href="#steps">Algorithims used </a>
           </ol>
           <!-- <ol><a href="#"></a>Info</ol> -->
         </ul>
       </nav>
       <main class="main">
-        <section class="section1">
-          <article>
-            <h2>Image caption generator</h2>
+        <section id="section1">
+          <h2>Image caption generator</h2>
+          <article class="ar">
             <p>
               The model takes the image as an input and goes through the CNN
               model for feature extraction and then passes through the LSTM
-              model for caption generation. The model will train over the
-              training data of 30000 samples.
+              model for caption generation.
             </p>
+
+            <div class="sec1--image">
+              <img src="images/OIP.jpg" alt="aa" />
+            </div>
+          </article>
+          <article class="ar">
+            <div>
+              <img src="images/OIP.jpg" alt="aa" />
+            </div>
+            <p>The model will train over the training data of 30000 samples.</p>
           </article>
         </section>
 
-        <section class="section2">
+        <section id="section2">
           <h2>Insert your image here</h2>
           <div class="container">
             <div class="container--image">
               <input type="file" class="input--image" accept="image/*" />
             </div>
-            <div class="display--image"></div>
+            <!-- <div class="display--image"></div> -->
+            <img class="display--image"></img>
             <div class="container--Text">
               <input type="text" class="text" />
             </div>
           </div>
         </section>
-        <section class="steps">
+        <section id="steps">
           <h2>Steps applied</h2>
           <ol>
             <li>read caption data</li>
