@@ -4,6 +4,9 @@
   box-sizing: border-box;
   line-height: 1.5;
 }
+body {
+  font: ;
+}
 a {
   color: black;
   text-decoration: none;
@@ -44,13 +47,28 @@ header {
   gap: 4vh;
 }
 
-.section1 {
+#section1 {
   grid-area: section1;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
-.section2 {
+
+.ar {
+  display: flex;
+  /* background-color: aliceblue; */
+  margin-bottom: 3vh;
+}
+.ar p {
+  width: 50%;
+}
+.ar div {
+  width: 50%;
+}
+.sec1--image {
+}
+#section2 {
   grid-area: section2;
-  background-color: antiquewhite;
+  box-shadow: 10px 10px 5px 12px rgb(228, 232, 234);
+  /* background-color: antiquewhite; */
 }
 .container {
   padding-top: 5vh;
@@ -73,11 +91,11 @@ header {
   width: 40vw;
 }
 
-.steps {
+#steps {
   grid-area: steps;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
-.steps ol {
+#steps ol {
   padding-left: 3vw;
 }
 
@@ -89,19 +107,13 @@ header {
 }
 .footer-logo {
   grid-area: logo;
-  background-color: azure;
+  /* background-color: azure; */
 }
 .footer-nav {
   grid-area: nav;
-  background-color: beige;
+  /* background-color: beige; */
 }
 
 .logo-r {
   max-width: 100%;
-}
-
-.ll {
-  /* margin: 10px; */
-  width: fit-content;
-  max-width: 10%;
 }
