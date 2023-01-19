@@ -2,7 +2,7 @@
 // var displayImage = document.getElementById("display--image");
 
 var inputImage = document.querySelector(".input--image");
-var inputImage = document.querySelector(".display--image");
+var displayImage = document.querySelector(".display--image");
 
 inputImage.addEventListener("change", function () {
   var file = inputImage.files[0];
