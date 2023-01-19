@@ -1,12 +1,14 @@
-// var inputImage = document.getElementById("input--image");
-// var displayImage = document.getElementById("display--image");
+// let inputImage = document.getElementById("input--image");
+// let displayImage = document.getElementById("display--image");
 
-var inputImage = document.querySelector(".input--image");
-var displayImage = document.querySelector(".display--image");
+const inputImage = document.querySelector(".input--image");
+const displayImage = document.querySelector(".display--image");
+let navLinks = document.querySelectorAll("nav a");
 
+//Displaying the image in the container
 inputImage.addEventListener("change", function () {
-  var file = inputImage.files[0];
-  var reader = new FileReader();
+  let file = inputImage.files[0];
+  let reader = new FileReader();
   reader.onload = function (e) {
     displayImage.src = e.target.result;
     displayImage.style.display = "block";
@@ -14,13 +16,25 @@ inputImage.addEventListener("change", function () {
   reader.readAsDataURL(file);
 });
 
-var navLinks = document.querySelectorAll("nav a");
-
+//Scrolling smoothly to the section
 navLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     e.preventDefault();
-    var targetId = link.getAttribute("href");
-    var target = document.querySelector(targetId);
+    let targetId = link.getAttribute("href");
+    let target = document.querySelector(targetId);
     target.scrollIntoView({ behavior: "smooth" });
   });
 });
+
+//Sending the image to the backend
+const formData = new FormData();
+
+formData.append("file", inputImage.files[0]);
+
+fetch("http://localhost:5000/upload", {
+  method: "POST",
+  body: formData,
+})
+  .then((response) => response.text())
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
