@@ -3,6 +3,7 @@
 
 const inputImage = document.querySelector(".input--image");
 const displayImage = document.querySelector(".display--image");
+const caption = document.querySelector(".caption--text");
 let navLinks = document.querySelectorAll("nav a");
 
 //Displaying the image in the container
@@ -14,6 +15,20 @@ inputImage.addEventListener("change", function () {
     displayImage.style.display = "block";
   };
   reader.readAsDataURL(file);
+
+  //Sending the image to the backend
+  const formData = new FormData();
+
+  formData.append("file", inputImage.files[0]);
+
+  fetch("http://localhost:1001/upload", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.text())
+    // .then((data) => console.log(data))
+    .then((data) => caption.textContent(data))
+    .catch((error) => console.error(error));
 });
 
 //Scrolling smoothly to the section
@@ -25,16 +40,3 @@ navLinks.forEach(function (link) {
     target.scrollIntoView({ behavior: "smooth" });
   });
 });
-
-//Sending the image to the backend
-const formData = new FormData();
-
-formData.append("file", inputImage.files[0]);
-
-fetch("http://localhost:5000/upload", {
-  method: "POST",
-  body: formData,
-})
-  .then((response) => response.text())
-  .then((data) => console.log(data))
-  .catch((error) => console.error(error));
