@@ -15,13 +15,17 @@ h2 {
   font-size: 42px;
 }
 p,
-ol {
+ol,
+ul {
   font-size: 24px;
 }
 .page {
   height: 150vh;
   display: grid;
   grid-template-rows: 50px 50px 1fr 50px;
+}
+ul {
+  text-decoration: none;
 }
 
 header {
@@ -56,6 +60,7 @@ header {
   display: flex;
   /* background-color: aliceblue; */
   margin-bottom: 3vh;
+  gap: 10px;
 }
 .ar p {
   width: 50%;
@@ -63,7 +68,12 @@ header {
 .ar div {
   width: 50%;
 }
-.sec1--image {
+.caption--example p {
+  font-size: 18px;
+}
+
+.sec1--image img {
+  max-width: 100%;
 }
 #section2 {
   grid-area: section2;
@@ -81,21 +91,22 @@ header {
 }
 
 .display--image {
-  width: 40vw;
-  height: 35vh;
+  width: 50vw;
+  height: 55vh;
   border: 1px black solid;
   background-position: center;
   background-size: cover;
 }
-.text {
-  width: 40vw;
+.caption--text {
+  width: 50vw;
 }
 
 #steps {
   grid-area: steps;
   /* background-color: aqua; */
 }
-#steps ol {
+#steps ol,
+.eval ul {
   padding-left: 3vw;
 }
 
@@ -111,6 +122,7 @@ header {
 }
 .footer-nav {
   grid-area: nav;
+  font-size: 24px;
   /* background-color: beige; */
 }
 
