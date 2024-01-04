@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@Mohammad-Ayman 
-hamza-abuzahra
-/
-Image_captioning
-Public
-Fork your own copy of hamza-abuzahra/Image_captioning
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Image_captioning/api.py /
-@hamza-abuzahra
-hamza-abuzahra first commit
-Latest commit df6ad27 yesterday
- History
- 1 contributor
-77 lines (65 sloc)  2.32 KB
-
 from flask import Flask
 import numpy as np
 import pickle
@@ -104,18 +75,3 @@ def return_caption():
     
 # if __name__ == "__main__":
     # main()
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Image_captioning/api.py at main · hamza-abuzahra/Image_captioning 
